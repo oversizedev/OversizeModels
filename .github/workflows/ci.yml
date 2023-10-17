@@ -14,8 +14,14 @@ jobs:
       package: "OversizeModels"
     secrets: inherit
 
+  tests:
+     name: Test
+     needs: build-swiftpm
+     uses: oversizedev/GithubWorkflows/.github/workflows/test.yml@main
+     secrets: inherit
+
   bump:
      name: Bump version
-     needs: build-swiftpm
+     needs: tests
      uses: oversizedev/GithubWorkflows/.github/workflows/bump.yml@main
      secrets: inherit
