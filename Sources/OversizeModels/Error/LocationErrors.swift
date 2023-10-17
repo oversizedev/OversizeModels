@@ -33,7 +33,7 @@ extension AppError.Enums.Location: AppErrorProtocol {
 
     public var image: Image? {
         switch self {
-        default: return Image("Error", bundle: .module)
+        default: return Image(.error)
         }
     }
 

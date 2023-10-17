@@ -32,7 +32,7 @@ extension AppError.Enums.Notification: AppErrorProtocol {
     }
 
     public var image: Image? {
-        Image("Error", bundle: .module)
+        Image(.error)
     }
 
     public var icon: Image? {

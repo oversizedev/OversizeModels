@@ -3,14 +3,13 @@
 
 import PackageDescription
 
-let productionDependencies: [PackageDescription.Package.Dependency] = { [
+let productionDependencies: [PackageDescription.Package.Dependency] = [
     .package(url: "https://github.com/oversizedev/OversizeLocalizable.git", .upToNextMajor(from: "1.5.0")),
-] }()
+]
 
-let developmentDependencies: [PackageDescription.Package.Dependency] = { [
+let developmentDependencies: [PackageDescription.Package.Dependency] = [
     .package(name: "OversizeLocalizable", path: "../OversizeLocalizable"),
-] }()
-
+]
 
 let package = Package(
     name: "OversizeModels",
@@ -24,7 +23,8 @@ let package = Package(
     products: [
         .library(
             name: "OversizeModels",
-            targets: ["OversizeModels"]),
+            targets: ["OversizeModels"]
+        ),
     ],
     dependencies: productionDependencies,
     targets: [
@@ -32,9 +32,11 @@ let package = Package(
             name: "OversizeModels",
             dependencies: [
                 .product(name: "OversizeLocalizable", package: "OversizeLocalizable"),
-            ]),
+            ]
+        ),
         .testTarget(
             name: "OversizeModelsTests",
-            dependencies: ["OversizeModels"]),
+            dependencies: ["OversizeModels"]
+        ),
     ]
 )

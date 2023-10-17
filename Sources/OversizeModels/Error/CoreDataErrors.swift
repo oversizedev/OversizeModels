@@ -38,7 +38,7 @@ extension AppError.Enums.CoreData: AppErrorProtocol {
     }
 
     public var image: Image? {
-        Image("Error", bundle: .module)
+        Image(.error)
     }
 
     public var icon: Image? {

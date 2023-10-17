@@ -1,5 +1,5 @@
-import XCTest
 @testable import OversizeModels
+import XCTest
 
 final class OversizeModelsTests: XCTestCase {
     func testExample() throws {
