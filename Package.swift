@@ -3,19 +3,36 @@
 
 import PackageDescription
 
+let productionDependencies: [PackageDescription.Package.Dependency] = { [
+    .package(url: "https://github.com/oversizedev/OversizeLocalizable.git", .upToNextMajor(from: "1.5.0")),
+] }()
+
+let developmentDependencies: [PackageDescription.Package.Dependency] = { [
+    .package(name: "OversizeLocalizable", path: "../OversizeLocalizable"),
+] }()
+
+
 let package = Package(
     name: "OversizeModels",
+    defaultLocalization: "en",
+    platforms: [
+        .iOS(.v15),
+        .macOS(.v12),
+        .tvOS(.v15),
+        .watchOS(.v9),
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "OversizeModels",
             targets: ["OversizeModels"]),
     ],
+    dependencies: productionDependencies,
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "OversizeModels"),
+            name: "OversizeModels",
+            dependencies: [
+                .product(name: "OversizeLocalizable", package: "OversizeLocalizable"),
+            ]),
         .testTarget(
             name: "OversizeModelsTests",
             dependencies: ["OversizeModels"]),
