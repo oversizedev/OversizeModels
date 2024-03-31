@@ -105,20 +105,7 @@ public struct PlistConfiguration: Codable {
             public var facebookUrl: URL? {
                 URL(string: "https://www.facebook.com/\(String(describing: facebook))")
             }
-
-            //
-            //        public var telegramUrl: URL? {
-            //            URL(string: "https://www.facebook.com/\(String(describing: fecebook))")
-            //        }
-            //
-            //        public var dribbbleUrl: URL? {
-            //            URL(string: "https://www.facebook.com/\(String(describing: fecebook))")
-            //        }
-            //
-            //        public var instagramUrl: URL? {
-            //            URL(string: "https://www.instagram.com/\(String(describing: fecebook))")
-            //        }
-
+            
             public var url: URL? {
                 URL(string: urlString ?? "")
             }
