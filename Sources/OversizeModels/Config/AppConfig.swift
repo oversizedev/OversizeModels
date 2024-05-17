@@ -105,7 +105,7 @@ public struct PlistConfiguration: Codable {
             public var facebookUrl: URL? {
                 URL(string: "https://www.facebook.com/\(String(describing: facebook))")
             }
-            
+
             public var url: URL? {
                 URL(string: urlString ?? "")
             }
@@ -156,7 +156,7 @@ public struct PlistConfiguration: Codable {
             case features = "Features"
         }
 
-        public struct StoreFeature: Codable, Identifiable, Hashable {
+        public struct StoreFeature: Codable, Identifiable, Hashable, Equatable {
             public var id: String {
                 (image ?? "") + (title ?? "") + (subtitle ?? "")
             }
