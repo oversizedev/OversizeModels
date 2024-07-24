@@ -37,7 +37,7 @@ extension AppError.Enums.FileManager: AppErrorProtocol {
     }
 
     public var image: Image? {
-        Image(.error)
+        Image("Error", bundle: .module)
     }
 
     public var icon: Image? {

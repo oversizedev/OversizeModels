@@ -35,7 +35,7 @@ extension AppError.Enums.CloudKit: AppErrorProtocol {
     }
 
     public var image: Image? {
-        Image(.error)
+        Image("Error", bundle: .module)
     }
 
     public var icon: Image? {

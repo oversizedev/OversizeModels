@@ -42,7 +42,7 @@ extension AppError.Enums.NetworkError: AppErrorProtocol {
 
     public var image: Image? {
         switch self {
-        default: return Image(.error)
+        default: return Image("Error", bundle: .module)
         }
     }
 

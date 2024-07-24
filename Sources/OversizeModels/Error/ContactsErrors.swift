@@ -29,7 +29,7 @@ extension AppError.Enums.Contacts: AppErrorProtocol {
     }
 
     public var image: Image? {
-        Image(.error)
+        Image("Error", bundle: .module)
     }
 
     public var icon: Image? {
