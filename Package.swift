@@ -26,13 +26,14 @@ let package = Package(
             targets: ["OversizeModels"]
         ),
     ],
-    dependencies: productionDependencies,
+    dependencies: developmentDependencies,
     targets: [
         .target(
             name: "OversizeModels",
             dependencies: [
                 .product(name: "OversizeLocalizable", package: "OversizeLocalizable"),
-            ]
+            ],
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "OversizeModelsTests",
