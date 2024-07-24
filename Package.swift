@@ -2,14 +2,21 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
+import Foundation
 
-let productionDependencies: [PackageDescription.Package.Dependency] = [
+let remoteDependencies: [PackageDescription.Package.Dependency] = [
     .package(url: "https://github.com/oversizedev/OversizeLocalizable.git", .upToNextMajor(from: "1.5.0")),
 ]
 
-let developmentDependencies: [PackageDescription.Package.Dependency] = [
+let localDependencies: [PackageDescription.Package.Dependency] = [
     .package(name: "OversizeLocalizable", path: "../OversizeLocalizable"),
 ]
+
+var dependencies: [PackageDescription.Package.Dependency] = localDependencies
+
+if ProcessInfo.processInfo.environment["BUILD_MODE"] == "PRODUCTION" {
+    dependencies = remoteDependencies
+}
 
 let package = Package(
     name: "OversizeModels",
@@ -26,7 +33,7 @@ let package = Package(
             targets: ["OversizeModels"]
         ),
     ],
-    dependencies: developmentDependencies,
+    dependencies: dependencies,
     targets: [
         .target(
             name: "OversizeModels",
