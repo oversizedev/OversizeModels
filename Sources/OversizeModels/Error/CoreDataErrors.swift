@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum CoreData {
+    enum CoreData: Sendable {
         case deleteItem
         case updateItem
         case savingItem

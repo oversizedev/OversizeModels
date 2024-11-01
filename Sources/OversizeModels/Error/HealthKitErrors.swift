@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum HealthKit {
+    enum HealthKit: Sendable {
         case deleteItem
         case updateItem
         case savingItem

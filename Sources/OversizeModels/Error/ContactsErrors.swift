@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum Contacts {
+    enum Contacts: Sendable {
         case notAccess
         case unknown
     }

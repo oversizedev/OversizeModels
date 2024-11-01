@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum Location {
+    enum Location: Sendable {
         case notDetermined
         case notAccess
         case unknown

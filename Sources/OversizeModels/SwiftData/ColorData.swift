@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-public struct ColorData: Codable {
+public struct ColorData: Codable, Sendable {
     private var red: Double = 1
     private var green: Double = 1
     private var blue: Double = 1

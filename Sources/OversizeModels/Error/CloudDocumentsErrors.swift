@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum CloudDocuments {
+    enum CloudDocuments: Sendable {
         case deleteItem
         case updateItem
         case savingItem

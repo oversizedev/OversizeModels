@@ -12,7 +12,7 @@ public protocol AppErrorProtocol {
     var icon: Image? { get }
 }
 
-public enum AppError: Error {
+public enum AppError: Error, Sendable {
     case network(type: Enums.NetworkError)
     case cloudKit(type: Enums.CloudKit)
     case location(type: Enums.Location)

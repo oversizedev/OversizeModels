@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum Notification {
+    enum Notification: Sendable {
         case notDetermined
         case notAccess
         case unknown

@@ -5,29 +5,29 @@
 
 import Foundation
 
-public struct PlistConfiguration: Codable {
+public struct PlistConfiguration: Codable, Sendable {
     public var store: Store
     public var apps: [App]
     public var links: Links
 
-    private enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey, Sendable {
         case store = "Store"
         case apps = "Apps"
         case links = "Links"
     }
 
-    public struct Links: Codable {
+    public struct Links: Codable, Sendable {
         public var app: App
         public var developer: Developer
         public var company: Company
 
-        private enum CodingKeys: String, CodingKey {
+        private enum CodingKeys: String, CodingKey, Sendable {
             case app = "App"
             case developer = "Developer"
             case company = "Company"
         }
 
-        public struct App: Codable, Hashable {
+        public struct App: Codable, Hashable, Sendable {
             public var urlString: String?
             public var telegramChat: String?
             public var appStoreId: String
@@ -67,21 +67,21 @@ public struct PlistConfiguration: Codable {
                 return url
             }
 
-            private enum CodingKeys: String, CodingKey {
+            private enum CodingKeys: String, CodingKey, Sendable {
                 case urlString = "Url"
                 case telegramChat = "TelegramChat"
                 case appStoreId = "AppStoreID"
             }
         }
 
-        public struct Developer: Codable, Hashable {
+        public struct Developer: Codable, Hashable, Sendable {
             public var name: String?
             public var url: String?
             public var email: String?
             public var fecebook: String?
             public var telegram: String?
 
-            private enum CodingKeys: String, CodingKey {
+            private enum CodingKeys: String, CodingKey, Sendable {
                 case name = "Name"
                 case url = "Url"
                 case email = "Email"
@@ -90,7 +90,7 @@ public struct PlistConfiguration: Codable {
             }
         }
 
-        public struct Company: Codable, Hashable {
+        public struct Company: Codable, Hashable, Sendable {
             public var name: String?
             public var urlString: String?
             public var email: String?
@@ -134,7 +134,7 @@ public struct PlistConfiguration: Codable {
         }
     }
 
-    public struct App: Codable, Identifiable, Hashable {
+    public struct App: Codable, Identifiable, Hashable, Sendable {
         public var id: String
         public var name: String?
         public var title: String?
@@ -149,14 +149,14 @@ public struct PlistConfiguration: Codable {
         }
     }
 
-    public struct Store: Codable {
+    public struct Store: Codable, Sendable {
         public var features: [StoreFeature]
 
-        private enum CodingKeys: String, CodingKey {
+        private enum CodingKeys: String, CodingKey, Sendable {
             case features = "Features"
         }
 
-        public struct StoreFeature: Codable, Identifiable, Hashable, Equatable {
+        public struct StoreFeature: Codable, Identifiable, Hashable, Equatable, Sendable {
             public var id: String {
                 (image ?? "") + (title ?? "") + (subtitle ?? "")
             }

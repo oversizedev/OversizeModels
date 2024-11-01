@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum FileManager {
+    enum FileManager: Sendable {
         case deleteItem
         case updateItem
         case savingItem
