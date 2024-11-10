@@ -5,14 +5,14 @@
 
 import SwiftUI
 
-public protocol AppErrorProtocol {
+public protocol AppErrorProtocol: Sendable {
     var title: String { get }
     var subtitle: String? { get }
     var image: Image? { get }
     var icon: Image? { get }
 }
 
-public enum AppError: Error, Sendable {
+public enum AppError: Error {
     case network(type: Enums.NetworkError)
     case cloudKit(type: Enums.CloudKit)
     case location(type: Enums.Location)
