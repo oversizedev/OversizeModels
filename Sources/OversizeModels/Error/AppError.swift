@@ -30,65 +30,65 @@ public enum AppError: Error {
 extension AppError: AppErrorProtocol {
     public var title: String {
         switch self {
-        case let .network(type): return type.title
-        case let .cloudKit(type): return type.title
-        case let .location(type): return type.title
-        case let .coreData(type): return type.title
-        case let .eventKit(type): return type.title
-        case let .contacts(type): return type.title
-        case let .notifications(type): return type.title
-        case let .cloudDocuments(type): return type.title
-        case let .fileManager(type): return type.title
-        case let .healthKit(type): return type.title
-        case let .custom(title, _, _): return title
+        case let .network(type): type.title
+        case let .cloudKit(type): type.title
+        case let .location(type): type.title
+        case let .coreData(type): type.title
+        case let .eventKit(type): type.title
+        case let .contacts(type): type.title
+        case let .notifications(type): type.title
+        case let .cloudDocuments(type): type.title
+        case let .fileManager(type): type.title
+        case let .healthKit(type): type.title
+        case let .custom(title, _, _): title
         }
     }
 
     public var subtitle: String? {
         switch self {
-        case let .network(type): return type.subtitle
-        case let .cloudKit(type): return type.subtitle
-        case let .location(type): return type.subtitle
-        case let .coreData(type): return type.subtitle
-        case let .eventKit(type): return type.subtitle
-        case let .contacts(type): return type.subtitle
-        case let .notifications(type): return type.subtitle
-        case let .cloudDocuments(type): return type.subtitle
-        case let .fileManager(type): return type.subtitle
-        case let .healthKit(type): return type.subtitle
-        case let .custom(_, subtitle, _): return subtitle
+        case let .network(type): type.subtitle
+        case let .cloudKit(type): type.subtitle
+        case let .location(type): type.subtitle
+        case let .coreData(type): type.subtitle
+        case let .eventKit(type): type.subtitle
+        case let .contacts(type): type.subtitle
+        case let .notifications(type): type.subtitle
+        case let .cloudDocuments(type): type.subtitle
+        case let .fileManager(type): type.subtitle
+        case let .healthKit(type): type.subtitle
+        case let .custom(_, subtitle, _): subtitle
         }
     }
 
     public var image: Image? {
         switch self {
-        case let .network(type): return type.image
-        case let .cloudKit(type): return type.image
-        case let .location(type): return type.image
-        case let .coreData(type): return type.image
-        case let .eventKit(type): return type.image
-        case let .contacts(type): return type.image
-        case let .notifications(type): return type.image
-        case let .cloudDocuments(type): return type.image
-        case let .fileManager(type): return type.image
-        case let .healthKit(type): return type.image
-        case let .custom(_, _, image): return image
+        case let .network(type): type.image
+        case let .cloudKit(type): type.image
+        case let .location(type): type.image
+        case let .coreData(type): type.image
+        case let .eventKit(type): type.image
+        case let .contacts(type): type.image
+        case let .notifications(type): type.image
+        case let .cloudDocuments(type): type.image
+        case let .fileManager(type): type.image
+        case let .healthKit(type): type.image
+        case let .custom(_, _, image): image
         }
     }
 
     public var icon: Image? {
         switch self {
-        case let .network(type): return type.icon
-        case let .cloudKit(type): return type.icon
-        case let .location(type): return type.icon
-        case let .coreData(type): return type.icon
-        case let .eventKit(type): return type.image
-        case let .contacts(type): return type.image
-        case let .notifications(type): return type.icon
-        case let .cloudDocuments(type): return type.icon
-        case let .fileManager(type): return type.icon
-        case let .healthKit(type): return type.icon
-        case let .custom(_, _, image): return image
+        case let .network(type): type.icon
+        case let .cloudKit(type): type.icon
+        case let .location(type): type.icon
+        case let .coreData(type): type.icon
+        case let .eventKit(type): type.image
+        case let .contacts(type): type.image
+        case let .notifications(type): type.icon
+        case let .cloudDocuments(type): type.icon
+        case let .fileManager(type): type.icon
+        case let .healthKit(type): type.icon
+        case let .custom(_, _, image): image
         }
     }
 }

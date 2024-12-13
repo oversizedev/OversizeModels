@@ -19,21 +19,21 @@ public extension AppError.Enums {
 extension AppError.Enums.CoreData: AppErrorProtocol {
     public var title: String {
         switch self {
-        case .deleteItem: return "Delete error"
-        case .updateItem: return "Update error"
-        case .savingItem: return "Saving error"
-        case .fetchItems: return "Fetch error"
-        case .unknown: return "Unknown"
+        case .deleteItem: "Delete error"
+        case .updateItem: "Update error"
+        case .savingItem: "Saving error"
+        case .fetchItems: "Fetch error"
+        case .unknown: "Unknown"
         }
     }
 
     public var subtitle: String? {
         switch self {
-        case .deleteItem: return L10n.Error.tryAgainLater
-        case .updateItem: return L10n.Error.tryAgainLater
-        case .savingItem: return L10n.Error.tryAgainLater
-        case .fetchItems: return L10n.Error.tryAgainLater
-        case .unknown: return L10n.Error.tryAgainLater
+        case .deleteItem: L10n.Error.tryAgainLater
+        case .updateItem: L10n.Error.tryAgainLater
+        case .savingItem: L10n.Error.tryAgainLater
+        case .fetchItems: L10n.Error.tryAgainLater
+        case .unknown: L10n.Error.tryAgainLater
         }
     }
 

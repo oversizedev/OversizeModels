@@ -18,19 +18,19 @@ public extension AppError.Enums {
 extension AppError.Enums.CloudKit: AppErrorProtocol {
     public var title: String {
         switch self {
-        case .decode: return L10n.Error.dataFromICloudCouldNotBeRead
-        case .noAccount: return L10n.Error.looksLikeYouDonTHaveAnICloudAccount
-        case .notAccess: return L10n.Error.noAccessToICloud
-        case .unknown: return L10n.Error.somethingWentWrongWithICloud
+        case .decode: L10n.Error.dataFromICloudCouldNotBeRead
+        case .noAccount: L10n.Error.looksLikeYouDonTHaveAnICloudAccount
+        case .notAccess: L10n.Error.noAccessToICloud
+        case .unknown: L10n.Error.somethingWentWrongWithICloud
         }
     }
 
     public var subtitle: String? {
         switch self {
-        case .decode: return L10n.Error.updatingAppShouldHelp
-        case .noAccount: return L10n.Error.mostLikelyYouNeedToLogInWithYourAppleIDInYourPhoneSettings
-        case .notAccess: return L10n.Error.mostLikelyYouNeedToLogInWithYourAppleIDInYourPhoneSettings
-        case .unknown: return L10n.Error.tryAgainLater
+        case .decode: L10n.Error.updatingAppShouldHelp
+        case .noAccount: L10n.Error.mostLikelyYouNeedToLogInWithYourAppleIDInYourPhoneSettings
+        case .notAccess: L10n.Error.mostLikelyYouNeedToLogInWithYourAppleIDInYourPhoneSettings
+        case .unknown: L10n.Error.tryAgainLater
         }
     }
 

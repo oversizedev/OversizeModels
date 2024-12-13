@@ -20,19 +20,19 @@ public extension AppError.Enums {
 extension AppError.Enums.FileManager: AppErrorProtocol {
     public var title: String {
         switch self {
-        case .deleteItem: return "Delete error"
-        case .updateItem: return "Update error"
-        case .savingItem: return "Saving error"
-        case .fetchItems: return "Fetch error"
-        case .notAccess: return "No access to files"
-        case .unknown: return "Unknown"
+        case .deleteItem: "Delete error"
+        case .updateItem: "Update error"
+        case .savingItem: "Saving error"
+        case .fetchItems: "Fetch error"
+        case .notAccess: "No access to files"
+        case .unknown: "Unknown"
         }
     }
 
     public var subtitle: String? {
         switch self {
-        case .notAccess: return "Please allow access to files in settings"
-        default: return L10n.Error.tryAgainLater
+        case .notAccess: "Please allow access to files in settings"
+        default: L10n.Error.tryAgainLater
         }
     }
 
