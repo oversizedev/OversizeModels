@@ -6,17 +6,15 @@ import PackageDescription
 
 let remoteDependencies: [PackageDescription.Package.Dependency] = [
     .package(url: "https://github.com/oversizedev/OversizeLocalizable.git", .upToNextMajor(from: "1.5.0")),
+    .package(url: "https://github.com/oversizedev/OversizeCore.git", .upToNextMajor(from: "1.3.0")),
 ]
 
 let localDependencies: [PackageDescription.Package.Dependency] = [
     .package(name: "OversizeLocalizable", path: "../OversizeLocalizable"),
+    .package(name: "OversizeCore", path: "../../../Packages/OversizeCore"),
 ]
 
-var dependencies: [PackageDescription.Package.Dependency] = remoteDependencies
-
-if ProcessInfo.processInfo.environment["BUILD_MODE"] == "DEV" {
-    dependencies = localDependencies
-}
+let dependencies: [PackageDescription.Package.Dependency] = remoteDependencies
 
 let package = Package(
     name: "OversizeModels",
@@ -30,7 +28,7 @@ let package = Package(
     products: [
         .library(
             name: "OversizeModels",
-            targets: ["OversizeModels"]
+            targets: ["OversizeModels"],
         ),
     ],
     dependencies: dependencies,
@@ -39,12 +37,13 @@ let package = Package(
             name: "OversizeModels",
             dependencies: [
                 .product(name: "OversizeLocalizable", package: "OversizeLocalizable"),
+                .product(name: "OversizeCore", package: "OversizeCore"),
             ],
-            resources: [.process("Resources")]
+            resources: [.process("Resources")],
         ),
         .testTarget(
             name: "OversizeModelsTests",
-            dependencies: ["OversizeModels"]
+            dependencies: ["OversizeModels"],
         ),
-    ]
+    ],
 )
