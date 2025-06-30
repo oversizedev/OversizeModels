@@ -17,16 +17,16 @@ public extension AppError.Enums {
 extension AppError.Enums.Notification: AppErrorProtocol {
     public var title: String {
         switch self {
-        case .notDetermined: "Select notificatons settings"
-        case .notAccess: "No access to notificatons"
-        case .unknown: "Unknown"
+        case .notDetermined: "Select notifications settings"
+        case .notAccess: "No access to notifications"
+        case .unknown: L10n.Error.somethingWentWrong
         }
     }
 
     public var subtitle: String? {
         switch self {
         case .notDetermined: nil
-        case .notAccess: "Please access to notifications in settings"
+        case .notAccess: "Please allow access to notifications in settings"
         default: L10n.Error.tryAgainLater
         }
     }

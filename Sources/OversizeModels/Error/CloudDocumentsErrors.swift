@@ -1,6 +1,6 @@
 //
 // Copyright © 2023 Alexander Romanov
-// File.swift, created on 02.05.2023
+// CloudDocumentsErrors.swift, created on 02.05.2023
 //
 
 import OversizeLocalizable
@@ -25,7 +25,7 @@ extension AppError.Enums.CloudDocuments: AppErrorProtocol {
         case .savingItem: "Saving error"
         case .fetchItems: "Fetch error"
         case .notAccess: "No access to iCloud"
-        case .unknown: "Unknown"
+        case .unknown: L10n.Error.somethingWentWrong
         }
     }
 
