@@ -1,6 +1,6 @@
 //
 // Copyright © 2023 Alexander Romanov
-// File.swift, created on 02.05.2023
+// CloudDocumentsErrors.swift, created on 02.05.2023
 //
 
 import OversizeLocalizable
