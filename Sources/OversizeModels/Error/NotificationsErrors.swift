@@ -19,7 +19,7 @@ extension AppError.Enums.Notification: AppErrorProtocol {
         switch self {
         case .notDetermined: "Select notifications settings"
         case .notAccess: "No access to notifications"
-        case .unknown: "Unknown"
+        case .unknown: L10n.Error.somethingWentWrong
         }
     }
 

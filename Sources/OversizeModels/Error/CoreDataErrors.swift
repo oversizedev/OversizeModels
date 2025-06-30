@@ -23,7 +23,7 @@ extension AppError.Enums.CoreData: AppErrorProtocol {
         case .updateItem: "Update error"
         case .savingItem: "Saving error"
         case .fetchItems: "Fetch error"
-        case .unknown: "Unknown"
+        case .unknown: L10n.Error.somethingWentWrong
         }
     }
 

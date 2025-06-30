@@ -17,7 +17,7 @@ extension AppError.Enums.Contacts: AppErrorProtocol {
     public var title: String {
         switch self {
         case .notAccess: "No access to the contacts"
-        case .unknown: "Unknown"
+        case .unknown: L10n.Error.somethingWentWrong
         }
     }
 

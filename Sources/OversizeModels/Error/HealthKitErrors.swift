@@ -25,7 +25,7 @@ extension AppError.Enums.HealthKit: AppErrorProtocol {
         case .savingItem: "Saving error"
         case .fetchItems: "Fetch error"
         case .notAccess: "No access to the HealthKit"
-        case .unknown: "Unknown"
+        case .unknown: L10n.Error.somethingWentWrong
         }
     }
 
