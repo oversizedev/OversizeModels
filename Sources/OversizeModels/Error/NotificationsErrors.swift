@@ -17,8 +17,8 @@ public extension AppError.Enums {
 extension AppError.Enums.Notification: AppErrorProtocol {
     public var title: String {
         switch self {
-        case .notDetermined: "Select notificatons settings"
-        case .notAccess: "No access to notificatons"
+        case .notDetermined: "Select notifications settings"
+        case .notAccess: "No access to notifications"
         case .unknown: "Unknown"
         }
     }
@@ -26,7 +26,7 @@ extension AppError.Enums.Notification: AppErrorProtocol {
     public var subtitle: String? {
         switch self {
         case .notDetermined: nil
-        case .notAccess: "Please access to notifications in settings"
+        case .notAccess: "Please allow access to notifications in settings"
         default: L10n.Error.tryAgainLater
         }
     }

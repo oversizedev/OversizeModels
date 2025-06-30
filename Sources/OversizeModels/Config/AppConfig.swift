@@ -78,14 +78,14 @@ public struct PlistConfiguration: Codable, Sendable {
             public var name: String?
             public var url: String?
             public var email: String?
-            public var fecebook: String?
+            public var facebook: String?
             public var telegram: String?
 
             private enum CodingKeys: String, CodingKey, Sendable {
                 case name = "Name"
                 case url = "Url"
                 case email = "Email"
-                case fecebook = "Fecebook"
+                case facebook = "Fecebook"
                 case telegram = "Telegram"
             }
         }

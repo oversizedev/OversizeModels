@@ -82,8 +82,8 @@ extension AppError: AppErrorProtocol {
         case let .cloudKit(type): type.icon
         case let .location(type): type.icon
         case let .coreData(type): type.icon
-        case let .eventKit(type): type.image
-        case let .contacts(type): type.image
+        case let .eventKit(type): type.icon
+        case let .contacts(type): type.icon
         case let .notifications(type): type.icon
         case let .cloudDocuments(type): type.icon
         case let .fileManager(type): type.icon

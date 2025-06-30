@@ -28,7 +28,7 @@ extension AppError.Enums.NetworkError: AppErrorProtocol {
         case .invalidURL:
             L10n.Error.invalidRequest
         case .noResponse:
-            L10n.Error.nothingСameFromServer
+            L10n.Error.nothingCameFromServer
         case .unexpectedStatusCode:
             L10n.Error.somethingWentWrong
         case .unknown:
