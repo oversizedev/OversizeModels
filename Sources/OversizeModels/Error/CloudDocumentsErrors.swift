@@ -25,7 +25,7 @@ extension AppError.Enums.CloudDocuments: AppErrorProtocol {
         case .savingItem: "Saving error"
         case .fetchItems: "Fetch error"
         case .notAccess: "No access to iCloud"
-        case .unknown: "Unknown"
+        case .unknown: L10n.Error.somethingWentWrong
         }
     }
 

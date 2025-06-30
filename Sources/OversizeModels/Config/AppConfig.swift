@@ -85,7 +85,7 @@ public struct PlistConfiguration: Codable, Sendable {
                 case name = "Name"
                 case url = "Url"
                 case email = "Email"
-                case facebook = "Fecebook"
+                case facebook = "Facebook"
                 case telegram = "Telegram"
             }
         }
