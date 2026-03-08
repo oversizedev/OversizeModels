@@ -11,10 +11,11 @@ let remoteDependencies: [PackageDescription.Package.Dependency] = [
 
 let localDependencies: [PackageDescription.Package.Dependency] = [
     .package(name: "OversizeLocalizable", path: "../OversizeLocalizable"),
-    .package(name: "OversizeCore", path: "../../../Packages/OversizeCore"),
+    .package(name: "OversizeCore", path: "../OversizeCore"),
 ]
 
-let dependencies: [PackageDescription.Package.Dependency] = remoteDependencies
+let isLocalDev = FileManager.default.fileExists(atPath: "\(NSHomeDirectory())/Developer/Packages/OversizeCore")
+let dependencies: [PackageDescription.Package.Dependency] = isLocalDev ? localDependencies : remoteDependencies
 
 let package = Package(
     name: "OversizeModels",
