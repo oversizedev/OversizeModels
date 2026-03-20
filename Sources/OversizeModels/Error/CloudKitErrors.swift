@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum CloudKit: Sendable {
+    enum CloudKit {
         case decode
         case noAccount
         case notAccess

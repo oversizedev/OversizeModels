@@ -7,7 +7,7 @@ import OversizeLocalizable
 import SwiftUI
 
 public extension AppError.Enums {
-    enum NetworkError: Sendable {
+    enum NetworkError {
         case decode
         case invalidURL
         case noResponse
